@@ -1,0 +1,73 @@
+========================
+Dimensions of Grids of designs 
+    H->Height->Number of rows
+    W->width ->Number of columns
+    Max->Max Congestion
+    Min->Min Congestion
+========================
+adaptec1:   H-649   W-649   Max-106  N_Max-35
+adaptec2:   H-849   W-849   Max-164  N_Max-
+adaptec3:   H-1559  W-1549  Max-91   N_Max-31
+adaptec4:   H-1559  W-1549  Max-94   N_Max-
+adaptec5:   H-937   W-931   Max-160  N_Max-55
+bigblue1:   H-455   W-455   Max-127  N_Max-55
+bigblue2:   H-943   W-937   Max-77   N_Max-27
+bigblue3:   H-1115  W-1111  Max-180  N_Max-74
+bigblue4:   H-811   W-807   Max-239  N_Max-106
+newblue1:   H-799   W-799   Max-72   N_Max-32
+newblue2:   H-927   W-1115  Max-86   N_Max-55
+newblue3:   H-2513  W-1947  Max-912  N_Max-
+newblue4:   H-917   W-911   Max-141  N_Max-45
+newblue5:   H-1281  W-1275  Max-155  N_Max-44
+newblue6:   H-929   W-927   Max-172  N_Max-66
+newblue7:   H-   W-     Max-
+
+
+
+
+=============
+ Compilation
+=============
+Untar the source code.
+% tar -zxvf ISPD2008-NTHU-R-CodeRelease.tar.gz
+
+Change the working directory into src.
+% cd ISPD2008-NTHU-R-CodeRelease/src
+
+Use make command to compile the source code.
+% make clean all
+
+If no error occurs during compilation, the executable router will be in 
+ISPD2008-NTHU-R-CodeRelease/bin directory.
+
+
+===========
+ Execution
+===========
+./route --input=testcase_file_name --output=output_file_name [options] 
+
+Options.
+
+--p2-init-box-size=number
+Initial bounding-box size in Adaptive Multi-source Multi-sink Maze Routing in the main stage
+
+--p2-box-expand-size=number 
+Bounding-box expanding size in Adaptive Multi-source Multi-sink Maze Routing in the main stage
+
+--p2-max-iteration=number
+Maximum number of iterations in the main stage
+
+--p3-init-box-size=number
+Initial bounding-box size in Adaptive Multi-source Multi-sink Maze Routing in the refinement stage
+
+--p3-box-expand-size=number 
+Bounding-box expanding size in Adaptive Multi-source Multi-sink Maze Routing in the refinement stage
+
+--p3-max-iteration=number
+Maximum number of iterations in the refinement stage
+
+--overflow-threshold=number
+Overflow threshold in the main stage
+
+--monotonic-routing={1,0} 
+Enable/disable monotonic in each routing iteration 
